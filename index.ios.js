@@ -1,6 +1,6 @@
 /**
  * Sample Calc App
- * https://github.com/facebook/react-native
+ * https://github.com/rplees/Calc
  */
 'use strict';
 import React, {
@@ -81,9 +81,9 @@ class Cell extends Component {
 class BLayout extends Component {
   render() {
     var rows = this.props.board.grid.map((cells, row) =>
-      <View style={styles.row}>
+      <View style={styles.row} key={'row' + row}>
         {cells.map((v, col) =>
-          <Cell onCellPressed={this.props.onCellPressed} calc={this.props.calc} text={v}/>
+          <Cell onCellPressed={this.props.onCellPressed} key={v} calc={this.props.calc} text={v}/>
         )}
       </View>
     );
