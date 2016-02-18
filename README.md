@@ -25,6 +25,7 @@ In the newly created folder AwesomeProject/
 - 用 Xcode 打开
 - ⌘ + R
 - 玩
+
 ### 截图
 - ![screen](screen.png 'screen 截图')
 - ![screen2](niuniu.png 'screen2 截图')
