@@ -1,5 +1,5 @@
 /**
- * Sample Calc App
+ * Calc App
  * https://github.com/rplees/Calc
  */
 'use strict';
@@ -12,6 +12,8 @@ import React, {
   TouchableHighlight
 }
 from 'react-native';
+var PixelRatio = require('PixelRatio');
+var Dimensions = require('Dimensions');
 
 const CALC_TEXT_AC = 'AC',
   CALC_TEXT_BOOL = '+/-',
@@ -33,10 +35,13 @@ const CALC_TEXT_AC = 'AC',
   CALC_TEXT_POINT = '.',
   CALC_TEXT_EQUALS = '=';
 
-var BOARD_PADDING = 3;
-var CELL_MARGIN = 4;
-var CELL_SIZE = 85;
+var _width = Dimensions.get('window').width;
 
+const BOARD_PADDING = 3;
+const CELL_MARGIN = 4;
+const CELL_SIZE = (_width - (5 * CELL_MARGIN) - (2 * 2 * BOARD_PADDING)) / 4;
+
+console.log('CELL_SIZE:' + CELL_SIZE);
 class ResultView extends Component {
   render() {
     var style = [styles.result];
@@ -260,13 +265,14 @@ const styles = StyleSheet.create({
   cell: {
     width: CELL_SIZE,
     height: CELL_SIZE,
+    flex: 1,
     borderRadius: 5,
     margin: CELL_MARGIN,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   cell_2x: {
+    flex: 2,
     width: CELL_SIZE * 2 + BOARD_PADDING * 2,
     height: CELL_SIZE,
     borderRadius: 5,
@@ -287,7 +293,6 @@ const styles = StyleSheet.create({
   background_color_1: {
     backgroundColor: '#e0e0e0',
   },
-
   background_color_2: {
     backgroundColor: '#f6aa91',
   },
