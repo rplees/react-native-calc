@@ -50,6 +50,7 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
+  [NSThread sleepForTimeInterval:1.0f];
   [self.window makeKeyAndVisible];
   return YES;
 }
