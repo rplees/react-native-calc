@@ -26,6 +26,14 @@ In the newly created folder Calc/
 - ⌘ + R
 - 玩
 
+## Android
+### Device
+    - sh ./build_android.sh
+### Emulator
+    - Just run the project
+### Debug mode
+    - react-native run-android
+    
 ### 截图
-- ![screen](screen.png 'screen 截图')
-- ![screen2](niuniu.png 'screen2 截图')
+<img src="./screen.png" alt="screen 截图" height="350" width="200">
+<img src="./niuniu.png" alt="screen 截图" height="350" width="200">

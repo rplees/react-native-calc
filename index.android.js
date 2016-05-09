@@ -1,6 +1,6 @@
 /**
  * Calc App
- * https://github.com/rplees/Calc
+ * https://github.com/rplees/react-native-calc
  */
 'use strict';
 import React, {
